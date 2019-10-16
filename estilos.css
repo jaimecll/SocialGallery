@@ -1,0 +1,39 @@
+body {
+font-family: georgia;
+font-size: 16px ;
+line-height: 45px;
+margin: 0;
+line-height: 25px
+}
+
+h3{
+	text-align: center;
+	font-size: 20px;
+
+}
+h3.fecha{
+	margin-top: -20px;
+ 	text-align: center;
+ 	font-size: 12px;
+}
+
+p{
+	text-align: center;
+	font-size: 12px;
+}
+
+div.contenedortodo{
+
+	width: 90%;
+	
+
+}
+
+.contenedor{
+
+	float: left;
+	width: 25%;
+	color: blue;
+	text-align: center;
+	 }
+
