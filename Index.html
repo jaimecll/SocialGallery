@@ -2,12 +2,13 @@
 <html>
 <head>
 	<title>login</title>
+	<script type="text/javascript" src="validacion.js"></script>
 </head>
 <body>
 	<h1>login</h1>
-	<form method="REQUEST" action="login.proc.php">
-		<input type="text" name="user" placeholder="inserta el usuario..." required><br/>
-		<input type="password" name="password" placeholder="Inserta el password" required><br/>
+	<form method="REQUEST" action="login.proc.php" onsubmit="return validacion()">
+		<input type="text" name="user" id="user" placeholder="inserta el usuario..."><br/><br/>
+		<input type="password" name="password" id="password" placeholder="Inserta el password"><br/><br/>
 		<input type="submit" name="Enviar">
 	</form>
 

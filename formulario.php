@@ -6,7 +6,7 @@
 	//Recogida de datos de la pagina del formulario
 	session_start();
 	if (isset($_SESSION['nombre'])) {
-		
+		$id=$_SESSION['id'];
 	$titulo = $_REQUEST['Titulo'];
 	$imagen = $_REQUEST['imagen'];
 	$link = mysqli_connect('localhost', 'root', '', 'bd_gamers');
@@ -42,7 +42,7 @@
 	
 		//Insercion de los datos en la base de datos
 
-		$insertar = "INSERT INTO imagen (titulo,imagen,fecha,peso,formato) VALUES ('$titulo', '$imagen', '$fecha','$peso','$tipo')";
+		$insertar = "INSERT INTO imagen (titulo,imagen,fecha,peso,formato,id_user) VALUES ('$titulo', '$imagen', '$fecha','$peso','$tipo','$id')";
 
 	$resultado = mysqli_query($link, $insertar);
 		if (!$resultado) {

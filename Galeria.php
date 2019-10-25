@@ -12,6 +12,7 @@ titulo|formato|fecha|imagen|id_img-->
 <?php  
 
 	session_start();
+	$id=$_SESSION['id'];
 	if (isset($_SESSION['nombre'])) {
 		
 	$us=$_SESSION['nombre'];
@@ -38,7 +39,7 @@ if (!isset($_POST['orden'])) {
 	    exit();
 
 	} else {
-		$gamers = mysqli_query($link, "SELECT * from imagen order by $orden");
+		$gamers = mysqli_query($link, "SELECT * from imagen where id_user=$id order by $orden");
 
 
 		

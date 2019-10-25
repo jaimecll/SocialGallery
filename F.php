@@ -12,6 +12,7 @@ session_start();
 	<link href="estilos.css" rel="stylesheet" type="text/css">
 	<meta charset="utf-8">
 	<title>Publica tu imagen</title>
+	<script type="text/javascript" src="validacion.js"></script>
 </head>
 <body>
 
@@ -21,13 +22,13 @@ session_start();
 	<center>
 
 		<!--formulario-->
-<form action="formulario.php" method="REQUEST" enctype="multipart/form-data">
+<form action="formulario.php" method="REQUEST" enctype="multipart/form-data" onsubmit="return validacionF()">
 	<label>Titulo</label>
-	<input type="text" name="Titulo" placeholder="Titulo" id="Titulo" required> 
+	<input type="text" name="Titulo" placeholder="Titulo" id="Titulo"> 
 	<br> <br>
 
 	<label>Subir Imágen</label>
-	<input type="file" accept="image/jpg, image/jpeg, image/png" name="imagen" id="imagen" required>
+	<input type="file" accept="image/jpg, image/jpeg, image/png" name="imagen" id="imagen">
 	<br> <br>
 	<input type="submit" name="Enviar" placeholder="Enviar">
 	<input type="reset" name="Borrar" value="Borrar">
