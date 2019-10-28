@@ -1,16 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>login</title>
-	<script type="text/javascript" src="validacion.js"></script>
+	<title>Social Gallery</title>
+	<style type="text/css">
+		body{
+	background-image:url("http://www.solofondos.com/wp-content/uploads/2015/11/Fondos-para-p%C3%A1ginas-web.jpg") ;
+ font-family: georgia;
+ font-size: 20px;
+color: white;
+}
+h1{
+	margin-left: 3%;
+}
+p{
+	margin-left: 50px;
+}
+div.cap{
+background-color: black;
+z-index: 1;
+font-family: georgia;
+font-size: 15px;
+position: fixed;
+height: 18%;
+left: 0;
+right: 0;
+top: 0;
+margin-bottom: 2%;
+padding-top: 30px;
+}
+
+div.cos{
+top: 20%;
+position: fixed;
+margin-left: 15%;
+width: 70%;
+height: 100%;
+align-items: center;
+}
+
+div.peu{
+position: fixed;
+bottom: 0;
+width: 100%;
+background-color: black;
+z-index: 1;
+font-family: georgia;
+font-size: 10px;
+padding-bottom: 10px;
+margin:0%;
+margin-top: 2%;
+height: auto;
+left: 0;
+right: 0;
+}
+
+	</style>
 </head>
 <body>
-	<h1>login</h1>
-	<form method="REQUEST" action="login.proc.php" onsubmit="return validacion()">
-		<input type="text" name="user" id="user" placeholder="inserta el usuario..."><br/><br/>
-		<input type="password" name="password" id="password" placeholder="Inserta el password"><br/><br/>
-		<input type="submit" name="Enviar">
-	</form>
-
+	<div class="cap"><h1>Social Gallery</h1></div>
+	<div class="cos">
+<h1> Bienvenido a mi galleria de imagenes.</h1>
+<p>En que consiste el proyecto?</p>
+<p>Como podras ver, en la pagina principal tienes un login, si intentas redirigirte de forma manual a cualquier otra pagina estas te redigiran automaticamente al login en caso de que no estes loggeado.Si intentas loggearte sin introducir nada en algun campo te marcara el/los campos que estan vacios marcandolos de rojo.</p>
+<p>Una vez loggeado podras ver las imagenes <b>del usuario con el que te has loggeado</b>. Para subir imagenes solo has de pulsar en el boton "Subir imagen" y accederas a un formulario donde poner titulo de la imagen y la imagen en si, los dos campos son obligatorios,si intentas dejar en blanco un campo saldran remarcados en rojo. Si intentas subir dos veces la misma imagen la base de datos lo detectara y te lo impedira. Una vez subida la imagen estara disponible en la galeria del usuario indicando fecha y titulo pero aparte de eso en la base de datos estara guardado el peso de la imagen y el formato para que se puedan ordenar con los filtros.</p>
+</div>
+<div class="peu">
+<p style="font-size: 20px; text-align: center;">© SocialGalley | jaimecll </p>
+	</div>
 </body>
 </html>
